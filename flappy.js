@@ -19,10 +19,17 @@ var bx = 19;
 var by = 150;
 var g = 1.8;
 var score = 0;
+//audio files
+var press = new Audio();
+var success = new Audio();
+
+press.src = "Sounds/fly.mp3";
+success.src = "Sounds/score.mp3";
 //on key presses
 document.addEventListener("keydown", moveUp);
 function moveUp () {
   by -= 35;
+  press.play();
 }
 //pipe coordinates
 var pipe = [];
@@ -51,6 +58,7 @@ function draw() {
   }
   if(pipe[i].x == 5){
     score++;
+    success.play();
   }
 }
   ctx.drawImage(fg,0,cvs.height - fg.height);
