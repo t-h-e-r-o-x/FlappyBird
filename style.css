@@ -1,0 +1,15 @@
+body{
+  background-color: black;
+}
+
+h1 {
+  font-family:monospace;
+  color:white;
+  position: relative;
+text-align: center;
+}
+
+#box {
+  display:block;
+text-align: center;
+}

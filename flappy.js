@@ -2,14 +2,14 @@ const cvs = document.getElementById("canvas");
 const ctx = cvs.getContext("2d");
 //create image variables
 const bird = new Image(38,26);
-const bg = new Image();
-const fg = new Image(306,118);
+const bg = new Image(900, 504);
+const fg = new Image(501,118);
 const pipeNorth = new Image(52,242);
 const pipeSouth = new Image(52,378);
 //loading images
 bird.src = "Images/bird.png";
-bg.src = "Images/bg.png";
-fg.src = "Images/fg.png";
+bg.src = "Images/bg5.png";
+fg.src = "Images/fg4.png";
 pipeNorth.src = "Images/pipeNorth.png";
 pipeSouth.src = "Images/pipeSouth.png";
 //position of bottom pillar
@@ -45,7 +45,7 @@ function draw() {
   ctx.drawImage(pipeNorth,pipe[i].x,pipe[i].y);
   ctx.drawImage(pipeSouth,pipe[i].x,pipe[i].y + c);
   pipe[i].x--;
-  if(pipe[i].x == 98){
+  if(pipe[i].x == 460){
     pipe.push({
       x: cvs.width,
       y: Math.floor(Math.random()*pipeNorth.height) - pipeNorth.height
@@ -66,7 +66,7 @@ function draw() {
   by += g;
   ctx.fillStyle = "black";
   ctx.font = "20px Verdana";
-  ctx.fillText("Score:" + score, 10,20);
+  ctx.fillText("Score:" + score, 10,cvs.height-20);
   requestAnimationFrame(draw);
 }
 
