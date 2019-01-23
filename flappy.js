@@ -64,9 +64,9 @@ function draw() {
   ctx.drawImage(fg,0,cvs.height - fg.height);
   ctx.drawImage(bird, bx, by);
   by += g;
-  ctx.fillStyle = "black";
-  ctx.font = "20px Verdana";
-  ctx.fillText("Score:" + score, 10,cvs.height-20);
+  ctx.fillStyle = "white";
+  ctx.font = "40px Monoton";
+  ctx.fillText(score, 360 ,60);
   requestAnimationFrame(draw);
 }
 

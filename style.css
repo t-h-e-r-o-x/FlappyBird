@@ -3,10 +3,11 @@ body{
 }
 
 h1 {
-  font-family:monospace;
+  font-family:'Press Start 2P';
+  font-weight: lighter;
   color:white;
   position: relative;
-text-align: center;
+  text-align: center;
 }
 
 #box {
